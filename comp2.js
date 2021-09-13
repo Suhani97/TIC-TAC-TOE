@@ -74,7 +74,9 @@ document.getElementById("txt").innerText=who;
 function turnclick(sqr)
 {
     if(typeof board[sqr.target.id]=='number')
-    {turn(sqr.target.id,firstplayer);
+    {
+	    setTimeout(() => {turn(best(),secondplayer);},1000);
+	    turn(sqr.target.id,firstplayer);
         if(!checktie())
        setTimeout(() => {turn(best(),secondplayer);},1000);
     }
