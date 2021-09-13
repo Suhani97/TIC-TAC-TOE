@@ -54,7 +54,7 @@ function startgame()
 
     }
     if(fm==2)
-    setTimeout(() => {turn(best(),secondplayer);},1000);
+     turn(best(),secondplayer);
 }
 function declarewinner(who,cc)
 {
@@ -75,10 +75,10 @@ function turnclick(sqr)
 {
     if(typeof board[sqr.target.id]=='number')
     {
-	    setTimeout(() => {turn(best(),secondplayer);},1000);
-	    turn(sqr.target.id,firstplayer);
+	   turn(sqr.target.id,firstplayer);
+	   
         if(!checktie())
-       setTimeout(() => {turn(best(),secondplayer);},1000);
+       turn(best(),secondplayer);
     }
 
 }
