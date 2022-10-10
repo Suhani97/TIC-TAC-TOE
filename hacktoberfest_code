@@ -1,39 +1,7 @@
-class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-           vector<int>ans,store;
-        int i,j,k,n,a,b;
-        n=nums.size();
-    	store = nums;
-    	sort(store.begin(), store.end());
-    	int left=0,right=n-1;
-    	int number1,number2;
+#Tic-tac-toe, 
 
-    	while(left<right){
-        	if(store[left]+store[right]==target){
+## also called noughts and crosses or Xs and Os is a game for two people that only requires pencil and paper, although you can also use a board with tokens.
 
-            	number1 = store[left];
-            	number2 = store[right];
+## The board – which can be a drawing on a paper or other place – consists of a square that is crossed by two vertical and two horizontal lines, so in total there are three small squares left in the top line, another 3 in the center line and 3 more in the bottom line.
 
-            	break;
-
-        	}
-        	else if(store[left]+store[right]>target)
-            	    right--;
-        	else
-            	    left++;
-    	}
-
-    	for(int i=0;i<nums.size();++i){
-
-        	if(nums[i]==number1||nums[i]==number2)
-            	    ans.push_back(i);
-
-    	}
-
-    	    
-        return ans;
-            
-    }
-};
-  
+## Each player takes turns drawing a cross or a circle in a square – or placing tokens of different shapes or colors. The winner is the one who manages to place three equal pieces in a row, either vertically, horizontally or diagonally.
